@@ -12,7 +12,7 @@ def area_calculation(radius, height):
 
     volume = math.pi * math.pow(radius, 2) * height
 
-    print("The volume is {0}m3".format(volume))
+    return volume
 
 
 def main():
@@ -30,7 +30,8 @@ def main():
         print("Please enter valid integers")
     else:
         if radius_int >= 0 and height_int >= 0:
-            area_calculation(radius_int, height_int)
+            volume = area_calculation(radius_int, height_int)
+            print("The volume is {:.2f}m3".format(volume))
         else:
             print("Please have 2 positive integers")
 
